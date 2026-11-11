@@ -1,0 +1,4 @@
+6 objects imported automatically (use -v 2 for details).
+
+catalogo:home / catalogo:home 200
+catalogo:lista /catalogo/ catalogo:lista 200

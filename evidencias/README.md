@@ -11,6 +11,12 @@ Las capturas muestran el estado de la aplicación al cerrar ese avance.
 - Verifico el proyecto antes de iniciar el servidor local.
 - Captura: `01-proyecto.jpg`.
 
+## 2. Rutas de la aplicación
+
+- Conecto `catalogo.urls` mediante `include()` y nombro las rutas.
+- Compruebo `reverse()`, `resolve()` y las respuestas HTTP de inicio y catálogo.
+- Captura: `02-rutas.jpg`.
+
 ## Registro de asistencia
 
 El desarrollo se realiza con asistencia de IA por solicitud del estudiante.
