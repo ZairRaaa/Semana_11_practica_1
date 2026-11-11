@@ -1,0 +1,6 @@
+Productos nuevos: 6. Total: 6.
+7 objects imported automatically (use -v 2 for details).
+
+all(): [('cuaderno de puntos', Decimal('18.90'), True), ('lápices de grafito', Decimal('12.50'), True), ('marcadores pastel', Decimal('24.00'), True), ('organizador de escritorio', Decimal('35.90'), False), ('planificador semanal', Decimal('22.00'), True), ('regla metálica', Decimal('9.90'), True)]
+filter(disponible=True): ['cuaderno de puntos', 'lápices de grafito', 'marcadores pastel', 'planificador semanal', 'regla metálica']
+filter(precio__lte=20): ['cuaderno de puntos', 'lápices de grafito', 'regla metálica']

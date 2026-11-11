@@ -31,6 +31,34 @@ Las capturas muestran el estado de la aplicación al cerrar ese avance.
 - Agrego estilos adaptables y un mensaje cuando el catálogo está vacío.
 - Capturas: `04-plantillas.jpg` y `04-inicio.jpg`.
 
+## 5. Modelo, migraciones y consultas
+
+- Defino `Producto`, su representación de texto y la validación del precio.
+- Creo y aplico la migración; agrego seis productos mediante el ORM.
+- Compruebo `all()` y `filter()`, búsqueda y disponibilidad combinadas.
+- Verifico las vistas, el escape de texto, el precio y el poblado repetible con pruebas.
+- Capturas: `05-productos.jpg`, `05-filtro.jpg`, `05-sin-resultados.jpg` y `05-movil.jpg`.
+- La base `db.sqlite3` se genera localmente y no se incluye en los commits.
+
+Revisión visual: escritorio a 1280 px y móvil a 390 px. La página móvil no
+desborda el ancho de pantalla; la tabla permite desplazamiento horizontal.
+La búsqueda «cuaderno» junto con «Solo disponibles» devuelve un producto;
+«sin coincidencias» muestra el mensaje vacío, y «Limpiar filtros» restaura los seis.
+
+## Capturas por avance
+
+| Avance | Captura |
+| --- | --- |
+| Entorno | [Proyecto funcionando](01-proyecto.jpg) |
+| Rutas | [Ruta del catálogo](02-rutas.jpg) |
+| Vistas | [Listado con contexto](03-vistas.jpg) |
+| Plantillas | [Inicio](04-inicio.jpg) · [Catálogo vacío](04-plantillas.jpg) |
+| Productos | [Listado completo](05-productos.jpg) |
+| Consultas | [Filtros combinados](05-filtro.jpg) · [Sin resultados](05-sin-resultados.jpg) |
+| Adaptación | [Vista móvil](05-movil.jpg) |
+
+![Catálogo con datos de SQLite](05-productos.jpg)
+
 ## Registro de asistencia
 
 El desarrollo se realiza con asistencia de IA por solicitud del estudiante.

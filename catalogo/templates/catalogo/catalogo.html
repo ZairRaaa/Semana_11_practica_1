@@ -7,7 +7,12 @@
     <p class="introduccion">Lo que necesitas para llevar tus ideas al papel y más allá.</p>
     <p class="actualizacion">Fecha de consulta: {{ fecha|date:"d/m/Y" }}</p>
 </section>
-{% block filtros %}{% endblock %}
+<form class="filtros" action="{% url 'catalogo:lista' %}" method="get" role="search" aria-label="Filtrar catálogo">
+    <div class="campo-busqueda"><label for="busqueda">Buscar por nombre</label><input id="busqueda" type="search" name="q" value="{{ busqueda }}" placeholder="Ej. cuaderno"></div>
+    <label class="checkbox"><input type="checkbox" name="disponibles" value="1" {% if solo_disponibles %}checked{% endif %}> Solo disponibles</label>
+    <button class="boton" type="submit">Buscar</button>
+    {% if busqueda or solo_disponibles %}<a class="limpiar" href="{% url 'catalogo:lista' %}">Limpiar filtros</a>{% endif %}
+</form>
 <section class="tarjeta listado" aria-labelledby="titulo-listado">
     <div class="listado-cabecera"><h2 id="titulo-listado">Nuestros productos</h2><span class="contador">{{ productos|length }} producto{{ productos|length|pluralize:"s" }}</span></div>
     {% if productos %}
@@ -26,7 +31,7 @@
         </table>
     </div>
     {% else %}
-    <div class="vacio"><span class="vacio-icono" aria-hidden="true">☷</span><h3>No hay productos para mostrar</h3><p>Vuelve pronto para descubrir las novedades del catálogo.</p></div>
+    <div class="vacio"><span class="vacio-icono" aria-hidden="true">☷</span><h3>No hay productos para mostrar</h3><p>{% if busqueda or solo_disponibles %}Prueba con otro nombre o limpia los filtros.{% else %}Vuelve pronto para descubrir las novedades del catálogo.{% endif %}</p></div>
     {% endif %}
 </section>
 <p class="nota cierre">Una buena herramienta es el comienzo de una gran idea.</p>

@@ -1,0 +1,7 @@
+Migrations for 'catalogo':
+  catalogo\migrations\0001_initial.py
+    + Create model Producto
+Operations to perform:
+  Apply all migrations: admin, auth, catalogo, contenttypes, sessions
+Running migrations:
+  Applying catalogo.0001_initial... OK
