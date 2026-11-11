@@ -40,6 +40,11 @@ manualmente para cumplirlo. Los registros de ejecución corresponden a verificac
 
 ### Incidencias resueltas con IA
 
+`# IA: estilos nuevos sin cargar en runserver → Solución manual: comprobar findstatic y reiniciar la recarga del servidor para que descubra el nuevo directorio static.`
+
+Conservo las capturas iniciales con sufijo `sin-estilos` y agrego las versiones
+verificadas tras recargar el servidor.
+
 `# IA: DisallowedHost al verificar las vistas en shell → Solución manual: permitir localhost con override_settings únicamente dentro de la comprobación; conservar settings.py sin cambios.`
 
 La solución anterior fue aplicada por IA; se registra como explicación para su revisión

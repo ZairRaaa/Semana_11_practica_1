@@ -3,3 +3,5 @@ System check identified no issues (0 silenced).
 
 Herencia, bloques y estado vacío: correctos
 Inicio y navegación por nombres: correctos
+Found 'catalogo/estilos.css' here:
+  C:\Users\NITRO 5\Downloads\9no semestre\DESARROLLO DE APLICACIONES WEB\Semana 11\Practica_1\catalogo\static\catalogo\estilos.css
