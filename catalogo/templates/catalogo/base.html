@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Un catálogo de útiles y accesorios para tus proyectos.">
+    <title>{% block title %}Mi catálogo{% endblock %} · Punto & Papel</title>
+    <link rel="stylesheet" href="{% static 'catalogo/estilos.css' %}">
+</head>
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="{% url 'catalogo:home' %}"><span class="simbolo" aria-hidden="true">p.</span> Punto & Papel</a>
+            <nav aria-label="Navegación principal">
+                <a href="{% url 'catalogo:home' %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>Inicio</a>
+                <a href="{% url 'catalogo:lista' %}" {% if request.resolver_match.url_name == 'lista' %}aria-current="page"{% endif %}>Catálogo</a>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="contenedor">{% block content %}{% endblock %}</main>
+    <footer class="contenedor pie"><span>Punto & Papel <span aria-hidden="true">/</span> Hecho para tus ideas.</span><span>{% now "Y" %} · Práctica de Desarrollo Web</span></footer>
+</body>
+</html>

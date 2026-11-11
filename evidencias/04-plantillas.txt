@@ -1,0 +1,5 @@
+System check identified no issues (0 silenced).
+6 objects imported automatically (use -v 2 for details).
+
+Herencia, bloques y estado vacío: correctos
+Inicio y navegación por nombres: correctos

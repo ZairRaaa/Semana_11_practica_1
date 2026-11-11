@@ -1,10 +1,33 @@
-<!doctype html>
-<html lang="es">
-<head><meta charset="utf-8"><title>{{ titulo }}</title></head>
-<body>
-    <h1>{{ titulo }}</h1>
-    <p>El listado está preparado para recibir productos.</p>
-    <p>Fecha: {{ fecha }}</p>
-    <a href="{% url 'catalogo:home' %}">Volver al inicio</a>
-</body>
-</html>
+{% extends 'catalogo/base.html' %}
+{% block title %}{{ titulo }}{% endblock %}
+{% block content %}
+<section class="titulo-pagina">
+    <p class="etiqueta">ENCUENTRA TU PRÓXIMA HERRAMIENTA</p>
+    <h1>El catálogo<span class="punto">.</span></h1>
+    <p class="introduccion">Lo que necesitas para llevar tus ideas al papel y más allá.</p>
+    <p class="actualizacion">Fecha de consulta: {{ fecha|date:"d/m/Y" }}</p>
+</section>
+{% block filtros %}{% endblock %}
+<section class="tarjeta listado" aria-labelledby="titulo-listado">
+    <div class="listado-cabecera"><h2 id="titulo-listado">Nuestros productos</h2><span class="contador">{{ productos|length }} producto{{ productos|length|pluralize:"s" }}</span></div>
+    {% if productos %}
+    <div class="tabla-scroll">
+        <table>
+            <thead><tr><th scope="col">Producto</th><th scope="col">Precio</th><th scope="col">Disponibilidad</th></tr></thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td><strong>{{ producto.nombre|title }}</strong><span class="descripcion">{{ producto.descripcion }}</span></td>
+                    <td class="precio">S/ {{ producto.precio|floatformat:2 }}</td>
+                    <td>{% if producto.disponible %}<span class="estado disponible">Disponible</span>{% else %}<span class="estado agotado">Agotado</span>{% endif %}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="vacio"><span class="vacio-icono" aria-hidden="true">☷</span><h3>No hay productos para mostrar</h3><p>Vuelve pronto para descubrir las novedades del catálogo.</p></div>
+    {% endif %}
+</section>
+<p class="nota cierre">Una buena herramienta es el comienzo de una gran idea.</p>
+{% endblock %}

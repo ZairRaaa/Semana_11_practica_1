@@ -24,6 +24,13 @@ Las capturas muestran el estado de la aplicación al cerrar ese avance.
 - Uso temporalmente una lista vacía hasta definir el modelo del paso 5.
 - Captura: `03-vistas.jpg`.
 
+## 4. Plantillas y presentación
+
+- Comparto la estructura mediante `base.html`, `extends` y bloques.
+- Uso `for`, `if`, `url`, `static` y los filtros `title`, `date` y `floatformat`.
+- Agrego estilos adaptables y un mensaje cuando el catálogo está vacío.
+- Capturas: `04-plantillas.jpg` y `04-inicio.jpg`.
+
 ## Registro de asistencia
 
 El desarrollo se realiza con asistencia de IA por solicitud del estudiante.
