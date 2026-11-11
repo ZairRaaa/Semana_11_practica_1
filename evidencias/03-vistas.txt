@@ -1,0 +1,4 @@
+6 objects imported automatically (use -v 2 for details).
+
+FBV home: HTTP 200, título y fecha en contexto
+CBV ListView: HTTP 200, lista vacía y contexto adicional correctos
